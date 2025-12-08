@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.4 Task 1-3</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/variables -->
+
+    <script>
+      // Task 1
+      // ---------------------------------------------------------------
+
+      let admin;
+      let name;
+
+      name = "John";
+      admin = name;
+
+      alert(admin);
+
+      // Task 2
+      // ---------------------------------------------------------------
+
+      let ourPlanetName = "Earth";
+      let currentUserName = "John";
+
+      // Task 3
+      // ---------------------------------------------------------------
+
+      function someCode(birthday) {
+        let dateString = birthday.split(".").reverse().join("-");
+        let birthdayDate = new Date(dateString);
+
+        let period = new Date();
+        period.setTime(Date.now() - birthdayDate.getTime());
+
+        return period.getFullYear() - 1970;
+      }
+
+      const BIRTHDAY = "18.04.1982";
+      const age = someCode(BIRTHDAY);
+
+      alert(age);
+    </script>
+  </body>
+</html>
