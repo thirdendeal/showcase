@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.9 Task 1</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/comparison -->
+
+    <script>
+      // Comparisons
+      // ---------------------------------------------------------------
+      //
+      // All comparison operators return a boolean value
+      // When comparing values of different types, JavaScript converts the values to numbers
+
+      // Strict equality and strict non-equality
+      //
+      // If a and b are of different types, then a === b immediately returns false
+
+      // Task 1
+      // ---------------------------------------------------------------
+
+      // String comparison
+      //
+      // Strings are compared letter-by-letter in the Unicode order
+
+      // null and undefined comparison
+      //
+      // Equal == to themselves and each other, but do not equal any other value
+
+      5 > 4; // true, 5 is greater than 4
+      "apple" > "pineapple"; // false, "a" doesn't come after "p" in Unicode
+      "2" > "12"; // true, "2" comes after "1" in Unicode
+      "Glow" > "Glee"; // true, "o" comes after "e" in Unicode
+      undefined == null; // true,
+      undefined === null; // false, different types
+      null == "\n0\n"; // false, null only equals undefined
+      null === +"\n0\n"; // false, different types
+    </script>
+  </body>
+</html>
