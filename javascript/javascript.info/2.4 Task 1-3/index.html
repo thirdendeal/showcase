@@ -9,11 +9,48 @@
     <!-- https://javascript.info/variables -->
 
     <script>
+      // "use strict"
+      //
+      // 2009's ECMAScript 5 (ES5) modifications are mostly off by default
+      // You need to explicitly enable them with a special directive
+      // The “use strict” directive must be at the top of its function or script
+      //
+      // Only comments may appear above "use strict"
+      //
+      // JavaScript “classes” and “modules”  enable use strict automatically
+      // When your code is all in classes and modules, you may omit it
+      //
+      // There’s no way to cancel use strict
+
+      "use strict";
+
+      // Comments
+      //
+      // Nested comments are not supported
+      // There may not be /*...*/ inside another /*...*/
+
       // Task 1
       // ---------------------------------------------------------------
 
+      // Semicolons
+      //
+      // It is possible to leave out semicolons most of the time
+      // But it’s safer to use them
+
+      // Variables
+      //
+      // To create a variable in JavaScript, use the let keyword
+      // A repeated declaration of the same variable is an error
+
+      // The old "var"
+      //
+      // There are subtle differences between let and var
+      // Normally we don’t use it at all, but you may find it in older scripts
+
       let admin;
       let name;
+
+      // let admin; // SyntaxError: 'admin' has already been declared
 
       name = "John";
       admin = name;
@@ -23,11 +60,24 @@
       // Task 2
       // ---------------------------------------------------------------
 
+      // Variable naming
+      //
+      // The name must contain only letters, digits, or the symbols $ and _
+      // The first character must not be a digit
+      //
+      // When the name contains multiple words, camelCase is commonly used
+      //
+      // Non-Latin letters are allowed, but not recommended
+
       let ourPlanetName = "Earth";
       let currentUserName = "John";
 
       // Task 3
       // ---------------------------------------------------------------
+
+      // Case matters
+      //
+      // Variables named birthday and BIRTHDAY are two different variables
 
       function someCode(birthday) {
         let dateString = birthday.split(".").reverse().join("-");
@@ -39,8 +89,15 @@
         return period.getFullYear() - 1970;
       }
 
+      // Constants
+      //
+      // Capital-named constants are only used as aliases for “hard-coded” values
+      // Constants calculated during the execution should be named normally
+
       const BIRTHDAY = "18.04.1982";
       const age = someCode(BIRTHDAY);
+
+      // const pageLoadTime = /* time taken by a webpage to load */;
 
       alert(age);
     </script>
