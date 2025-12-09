@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.5 Task 1</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/types -->
+
+    <script>
+      // Data types
+      // ---------------------------------------------------------------
+      //
+      // There are 8 basic data types in JavaScript:
+      //   Seven primitive data types:
+      //     number       for integer or floating-point numbers
+      //     bigint       for integer numbers of arbitrary length
+      //     string
+      //     boolean      for true/false
+      //     null         a standalone type for unknown values
+      //     undefined    a standalone type for unassigned values
+      //     symbol       for unique identifiers
+      //
+      //   And one non-primitive data type:
+      //     object       for more complex data structures
+
+      // The typeof operator
+      // ---------------------------------------------------------------
+      //
+      // typeof is an operator (typeof x), not a function (typeof(x))
+
+      typeof 0; // "number" // "number" integers are limited by ±(2^53-1)
+      typeof 10n; // "bigint"
+      typeof "foo"; // "string"
+      typeof true; // "boolean"
+      typeof null; // "object" // That’s an officially recognized error in typeof, kept for compatibility
+      typeof undefined; // "undefined"
+      typeof Symbol("id"); // "symbol"
+
+      typeof Math; // "object"
+
+      // Functions belong to the object type
+
+      typeof alert; // "function" // There’s no special “function” type, but typeof treats them differently
+
+      // Special numeric values belong to the "number" data type
+
+      typeof Infinity; // "number"
+      typeof -Infinity; // "number"
+      typeof NaN; // "number" // NaN represents a computational error
+
+      // NaN is sticky
+      //
+      // Any further mathematical operation on NaN returns NaN
+      // There’s only one exception to that:
+
+      typeof (NaN ** 0); // typeof (1) // "number"
+
+      // Mathematical operations are safe
+      // ---------------------------------------------------------------
+      //
+      // We can do anything: divide by zero, treat non-numeric strings as numbers, etc
+      // At worst, we’ll get NaN as the result
+
+      // Task 1
+      // ---------------------------------------------------------------
+
+      // Dynamic typing
+      //
+      // Variables in JavaScript are not bound to any data type
+
+      let name; // typeof name => "undefined"
+
+      name = null; // typeof name => "null"
+      name = "Ilya"; // typeof name => "string"
+
+      // String interpolation
+      //
+      // Backticks are “extended functionality” quotes, as opposed to "simple" quotes
+
+      alert(`hello ${1}`); // hello 1
+      alert(`hello ${"name"}`); // hello name
+      alert(`hello ${name}`); // hello Ilya
+    </script>
+  </body>
+</html>
