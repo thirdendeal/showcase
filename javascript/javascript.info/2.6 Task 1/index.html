@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.6 Task 1</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/alert-prompt-confirm -->
+
+    <script>
+      // Modal functions
+      // ---------------------------------------------------------------
+      //
+      // Pause script execution and don’t allow interaction until dismissed
+      //
+      // - The exact location of the modal window is determined by the browser
+      // - The exact look of the window also depends on the browser
+
+      // alert
+      //
+      // alert([message])
+
+      // confirm
+      //
+      // confirm([message]) -> "boolean"
+
+      // prompt
+      //
+      // prompt([message], [defaultValue]) -> "string" or "null"
+
+      // Task 1
+      // ---------------------------------------------------------------
+
+      let name = prompt("What's your name?", ""); // <-- "" for IE
+
+      if (name) {
+        alert(`Hello, ${name}!`);
+      } else {
+        alert("All right then, keep your secrets.");
+      }
+    </script>
+  </body>
+</html>
