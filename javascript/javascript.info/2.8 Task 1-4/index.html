@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.8 Task 1-4</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/operators -->
+
+    <script>
+      // Explicit type conversion
+      // ---------------------------------------------------------------
+      //
+      // String(value)
+      //
+      // Number(value) or +value
+      //   undefined: NaN
+      //   null: 0
+      //   boolean
+      //     true: 1
+      //     false: 0
+      //   string: Trims then parses
+      //     "": 0
+      //     failing to parse: NaN
+      //
+      // Boolean(value)
+      //   empty values: 0, "", null, undefined, NaN -> false
+      //   other values: true
+
+      // Task 1
+      // ---------------------------------------------------------------
+
+      // Increment by 1 and decrement by 1 operators
+      //
+      // Can only be applied to variables, either in postfix or prefix form
+
+      // counter++ // returns the "old" value
+      // ++counter // returns the "new" value
+
+      let valueA = 1;
+      let valueB = 1;
+
+      let receivesTwo = ++valueA; // receivesTwo = 2, valueA = 2
+      let receivesOne = valueB++; // receivesOne = 1, valueB = 2
+
+      // Task 2
+      // ---------------------------------------------------------------
+
+      // Assignment = returns a value
+
+      let valueC = 2;
+
+      // Short “modify-and-assign” operators
+      //
+      // Exist for all arithmetical and bitwise operators
+
+      let result = 1 + (valueC *= 2);
+      // let result = 1 + (valueC = valueC * 2)
+      // let result = 1 + (valueC = 2 * 2)
+      // let result = 1 + (valueC = 4)
+      // let result = 1 + (4)
+      // let result = 1 + 4
+      // let result = 5
+
+      // valueC = 4
+
+      // Task 3
+      // ---------------------------------------------------------------
+
+      // String Conversion
+      //
+      // Binary + operador propagates string conversion once given a string
+
+      // Numeric conversion
+      //
+      // Mathematical functions and expressions trigger numeric conversion
+
+      "" + 1 + 0;     // "" + String(1) + String(0) = "10"
+      "" - 1 + 0;     // Number("") - 1 + 0 = 0 - 1 + 0 = -1
+      true + false;   // Number(true) + Number(false) = 1 + 0 = 1
+      6 / "3";        // 6 / Number("3") = 6 / 3 = 2
+      "2" * "3";      // Number("2") * Number("3") = 2 * 3 = 6
+      4 + 5 + "px";   // (4 + 5) + "px" = 9 + "px" = String(9) + "px" = "9px"
+      "$" + 4 + 5;    // "$" + String(4) + String(5) = "$45"
+      "4" - 2;        // Number("4") - 2 = 4 - 2 = 2
+      "4px" - 2;      // Number("4px") - 2 = NaN - 2 = NaN
+      "  -9  " + 5;   // "  -9  " + String(5) = "  -9  5"
+      "  -9  " - 5;   // Number("  -9  ") - 5 = Number("-9") - 5 = -9 - 5 = -14
+      null + 1;       // Number(null) + 1 = 0 + 1
+      undefined + 1;  // Number(undefined) + 1 = NaN + 1 = NaN
+      " \t \n" - 2;   // Number(" \t \n") - 2 = Number("") - 2 = 0 - 2 = -2
+
+      // Task 4
+      // ---------------------------------------------------------------
+
+      let first = prompt("First number?", 1);
+      let second = prompt("Second number?", 2);
+
+      alert(`Concatenate both ${first + second}`); // 12 (from initial values)
+      alert(`Sum both ${+first + +second}`); // 3 (from initial values)
+    </script>
+  </body>
+</html>
