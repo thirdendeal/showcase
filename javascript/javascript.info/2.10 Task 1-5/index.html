@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.10 Task 1-5</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/ifelse -->
+
+    <script>
+      // Task 1
+      // ---------------------------------------------------------------
+
+      // This is valid
+      if ("0")
+        alert('In JavaScript, a non-empty string, like "0", is always true');
+
+      // This also would be valid
+      // if ("0") alert('In JavaScript, a non-empty string, like "0", is always true');
+
+      // Task 2
+      // ---------------------------------------------------------------
+
+      let response = prompt("What is the “official” name of JavaScript?", "");
+
+      if (response == "ECMAScript") {
+        alert("Right!");
+      } else {
+        alert("You don’t know? ECMAScript!");
+      }
+
+      // Task 3
+      // ---------------------------------------------------------------
+
+      let number = +prompt("Give me a number.", "");
+
+      if (number > 0) {
+        alert(1);
+      } else if (number == 0) {
+        alert(0);
+      } else {
+        alert(-1);
+      }
+
+      // Task 4
+      // ---------------------------------------------------------------
+
+      // The conditional operator ?
+      //
+      // Also called a “question mark” operator
+
+      let result, a, b;
+
+      // if (a + b < 4) {
+      //   result = "Below";
+      // } else {
+      //   result = "Over";
+      // }
+
+      result = a + b < 4 ? "Below" : "Over";
+      // result = (undefined + undefined) < 4 ? "Below" : "Over";
+      // result = (Number(undefined) + Number(undefined)) < 4 ? "Below" : "Over";
+      // result = (NaN + NaN) < 4 ? "Below" : "Over";
+      // result = NaN < 4 ? "Below" : "Over";
+      // result = false ? "Below" : "Over";
+
+      // result = "Over";
+
+      alert(result);
+
+      // Task 5
+      // ---------------------------------------------------------------
+
+      let message, login;
+
+      // if (login == "Employee") {
+      //   message = "Hello";
+      // } else if (login == "Director") {
+      //   message = "Greetings";
+      // } else if (login == "") {
+      //   message = "No login";
+      // } else {
+      //   message = "";
+      // }
+
+      message =
+        login == "Employee"
+          ? "Hello"
+          : login == "Director"
+          ? "Greetings"
+          : login == ""
+          ? "No login"
+          : "";
+
+      // message = ""
+
+      alert(message);
+    </script>
+  </body>
+</html>
