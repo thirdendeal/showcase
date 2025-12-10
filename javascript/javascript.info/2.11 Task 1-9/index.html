@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.11 Task 1-9</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/logical-operators -->
+
+    <script>
+      // Logical operators
+      //
+      // There are four logical operators in JavaScript:
+      //
+      // - OR: ||
+      // - AND: &&
+      // - NOT: !
+      // - Nullish Coalescing: ??
+
+      // Short-circuit evaluation
+      //
+      // - OR processes its arguments until the first TRUTHY value is reached
+      // - AND processes its arguments until the first FALSY value is reached
+
+      // ---------------------------------------------------------------
+
+      // Alert and prompt table
+      //
+      // Task 1: 2
+      // Task 2: 1, 2
+      // Task 3: null
+      // Task 4: 1, undefined
+      // Task 5: 3
+      // Task 6: "Age:", ... (conditional branching)
+      // Task 7: ... (conditional branching)
+      // Task 8: "first", "third"
+      // Task 9: "Login:", ... (conditional branching)
+
+      // Task 1
+      // ---------------------------------------------------------------
+
+      alert(null || 2 || undefined); // OR chain evaluates to 2
+
+      // alert(2);
+
+      // Task 2
+      // ---------------------------------------------------------------
+
+      alert(alert(1) || 2 || alert(3)); // alert(1) runs, no explicit return value = undefined
+
+      // alert(undefined || 2 || alert(3)); // OR chain evaluates to 2
+      // alert(2);
+
+      // alert(3) never runs due to short-circuit evaluation
+
+      // Task 3
+      // ---------------------------------------------------------------
+
+      alert(1 && null && 2); // AND chain evaluates to null
+
+      // alert(null);
+
+      // Task 4
+      // ---------------------------------------------------------------
+
+      alert(alert(1) && alert(2)); // alert(1) runs, no explicit return value = undefined
+
+      // alert(undefined && alert(2));
+      // alert(undefined);
+
+      // alert(2) never runs due to short-circuit evaluation
+
+      // Task 5
+      // ---------------------------------------------------------------
+
+      alert(null || (2 && 3) || 4); // OR chain evaluates to (2 && 3)
+
+      // alert(2 && 3);
+      // alert(3);
+
+      // Task 6
+      // ---------------------------------------------------------------
+
+      let age = +prompt("Age:", "");
+
+      let withinRange = age >= 14 && age <= 90;
+
+      if (withinRange) {
+        alert(`${age} is within 14 and 90 inclusively`);
+      }
+
+      // Task 7
+      // ---------------------------------------------------------------
+
+      if (!withinRange) {
+        alert(`${age} is NOT within 14 and 90 inclusively`);
+      }
+
+      let outOfRange = age < 14 || age > 90;
+
+      if (outOfRange) {
+        alert(`In other words ${age} is less than 14 OR greater than 90`);
+      }
+
+      // Task 8
+      // ---------------------------------------------------------------
+
+      if (-1 || 0) alert("first");
+
+      // if (true || false) alert("first");
+      // if (true) alert("first");
+
+      // alert("first");
+
+      if (-1 && 0) alert("second");
+
+      // if (true && false) alert("second");
+      // if (false) alert("second");
+
+      // alert("second") never runs
+
+      if (null || (-1 && 1)) alert("third");
+
+      // if (false || (true && true)) alert("third");
+      // if (false || true) alert("third");
+      // if (true) alert("third");
+
+      // alert("third");
+
+      // Task 9
+      // ---------------------------------------------------------------
+
+      let login = prompt("Login:", "");
+
+      if (login == "Admin") {
+        let password = prompt("Password:", "");
+
+        if (password === null || password === "") {
+          alert("Canceled");
+        } else if (password == "TheMaster") {
+          alert("Welcome!");
+        } else {
+          alert("Wrong password");
+        }
+      } else {
+        alert("I don’t know you");
+      }
+    </script>
+  </body>
+</html>
