@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.15 Task 1-4</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/function-basics -->
+
+    <script>
+      // Functions
+      //
+      // Pass by value
+      // - When a function is called, the given values are copied to local variables
+      //
+      // Local and global variables
+      // - Variable declared inside a function, are called local
+      // - Variables declared outside of any function, are called global
+      //
+      // Shadowing
+      // - If a same-named variable is declared inside the function then it shadows the outer one
+
+      // Bridging the gap with undefined
+      //
+      // A function with an empty return or without it returns undefined
+      // If a function is called, but an argument is not provided, then the corresponding value becomes undefined
+
+      // Default values
+      //
+      // A default parameter is evaluated every time the function is called without the respective argument
+      // The default value also jumps in if the argument exists, but strictly equals undefined
+
+      // Task 1
+      // ---------------------------------------------------------------
+
+      // Both behave the same
+
+      function checkAgeA(age) {
+        if (age > 18) {
+          return true;
+        } else {
+          return confirm("Did parents allow you?");
+        }
+      }
+
+      function checkAgeB(age) {
+        if (age > 18) {
+          return true;
+        }
+
+        return confirm("Did parents allow you?");
+      }
+
+      // Task 2
+      // ---------------------------------------------------------------
+
+      // function checkAge(age) {
+      //   if (age > 18) {
+      //     return true;
+      //   } else {
+      //     return confirm("Did parents allow you?");
+      //   }
+      // }
+
+      function checkAgeC(age) {
+        return age > 18 || confirm("Did parents allow you?");
+      }
+
+      // Task 3
+      // ---------------------------------------------------------------
+
+      function min(a, b) {
+        return a <= b ? a : b;
+      }
+
+      alert(min(2, 5)); // 2
+      alert(min(3, -1)); // -1
+      alert(min(1, 1)); // 1
+
+      // Task 4
+      // ---------------------------------------------------------------
+
+      function pow(x, n) {
+        // Ignoring the exponentiation operator for exercise purposes
+
+        let power = x;
+
+        for (let i = 1; i < n; i++) {
+          power *= x;
+        }
+
+        return power;
+      }
+
+      alert(pow(3, 2)); // 9
+      alert(pow(3, 3)); // 27
+      alert(pow(1, 100)); // 1
+
+      // ---------------------------------------------------------------
+
+      let x = +prompt("Give me a base x:", "");
+      let n = +prompt("Give me a natural exponent n:", "");
+
+      alert(`The result of pow(x = ${x}, n = ${n}) is: ${pow(x, n)}`);
+    </script>
+  </body>
+</html>
