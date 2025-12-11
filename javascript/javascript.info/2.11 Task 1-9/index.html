@@ -18,24 +18,24 @@
       // - NOT: !
       // - Nullish Coalescing: ??
 
+      // Nullish coalescing operator '??'
+      //
+      // If defined, returns the first argument, otherwise, the second one
+      //
+      // a ?? b
+      // (a !== null && a !== undefined) ? a : b;
+
       // Short-circuit evaluation
       //
-      // - OR processes its arguments until the first TRUTHY value is reached
-      // - AND processes its arguments until the first FALSY value is reached
-
-      // ---------------------------------------------------------------
-
-      // Alert and prompt table
+      // Process its arguments until reaching a value that is:
       //
-      // Task 1: 2
-      // Task 2: 1, 2
-      // Task 3: null
-      // Task 4: 1, undefined
-      // Task 5: 3
-      // Task 6: "Age:", ... (conditional branching)
-      // Task 7: ... (conditional branching)
-      // Task 8: "first", "third"
-      // Task 9: "Login:", ... (conditional branching)
+      // - OR: truthy (non-empty values)
+      // - AND: falsy (empty values)
+      // - Nullish Coalescing: defined
+
+      // Defined values
+      //
+      // Neither null nor undefined
 
       // Task 1
       // ---------------------------------------------------------------
@@ -146,6 +146,20 @@
       } else {
         alert("I don’t know you");
       }
+
+      // ---------------------------------------------------------------
+
+      // Modal summary
+      //
+      // Task 1: 2
+      // Task 2: 1, 2
+      // Task 3: null
+      // Task 4: 1, undefined
+      // Task 5: 3
+      // Task 6: "Age:", ... (conditional branching)
+      // Task 7: ... (conditional branching)
+      // Task 8: "first", "third"
+      // Task 9: "Login:", ... (conditional branching)
     </script>
   </body>
 </html>
