@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.17 Task 1</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/arrow-functions-basics -->
+
+    <script>
+      // Functions as values
+      //
+      // No matter how the function is created, a function is a value
+      //
+      // Function Expression
+      // - Created when the execution reaches it and is usable only from that moment
+      //
+      // Function Declaration
+      // - Processed before the code block is executed, they are visible everywhere in the block
+
+      // ---------------------------------------------------------------
+
+      // Arrow functions
+      //
+      // One-liners implicitly return their expression
+      // While an arrow function with a code block requires an explicit return to return a value
+      //
+      // Parameters shorthand
+      // - If there are no parameter, parentheses must be present
+      // - If there is only one parameter, then parentheses may be omitted
+
+      // let zeroParameters = () => alert("Hello!");
+      // let oneParameter = n => n * 2;
+      // let twoParameters = (a, b) => a + b;
+
+      // Task 1
+      // ---------------------------------------------------------------
+
+      function ask(question, yes, no) {
+        if (confirm(question)) yes();
+        else no();
+      }
+
+      // ask(
+      //   "Do you agree?",
+      //   function() { alert("You agreed."); },
+      //   function() { alert("You canceled the execution."); }
+      // );
+
+      ask(
+        "Do you agree?",
+        () => alert("You agreed."),
+        () => alert("You canceled the execution.")
+      );
+    </script>
+  </body>
+</html>
