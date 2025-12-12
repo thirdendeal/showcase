@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.4 Task 1-3</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/object-methods -->
+
+    <script>
+      // Object references and copying
+      //
+      // Objects are assigned and copied by reference
+      // Two objects are equal only if they are the same object (a and b reference the same object)
+
+      // Const objects can be modified
+      //
+      // An important side effect of storing objects as references is that an object declared as const can be modified
+
+      // Cloning and nested cloning
+      //
+      // - To make a “shallow copy” we can use Object.assign(destination, ...sources)
+      //   --> Nested objects are copied by reference
+      //   --> There are also other methods like using the spread syntax clone = {...source}
+      // - To make a nested copy we can use the “deep cloning” function structuredClone(object)
+      //   --> Circular references are supported
+      //   --> Function properties aren’t
+      // - To make a nested copy with function properties custom implementations are needed
+      //   --> Such as lodash's _.cloneDeep(obj)
+
+      // ---------------------------------------------------------------
+
+      // Garbage collection
+      //
+      // - Garbage collection is performed automatically. We cannot force or prevent it
+      // - Objects are retained in memory while they are reachable
+      // - Being referenced is not the same as being reachable (from a root)
+      // --> A pack of interlinked objects can become unreachable as a whole
+
+      // Mark-and-sweep
+      //
+      // The basic garbage collection algorithm is called “mark-and-sweep”
+      // We can imagine the process as spilling a huge bucket of paint from the roots
+      // That flows through all references and marks all reachable objects
+      // The unmarked ones are then removed
+
+      // ---------------------------------------------------------------
+
+      // Object methods
+      //
+      // Functions that are stored in object properties are called “methods”
+      // Methods can reference the object as this
+
+      // The this keyword
+      //
+      // Evaluated at call-time and not dependent on where it was declared (this is unbound)
+      // - A function can be reused for different objects (copied between objects)
+      // - On the other hand, the greater flexibility creates more possibilities for mistakes
+
+      // Arrow functions have no “this”
+      //
+      // Arrow functions are special: they don’t have their “own” this
+      // If we reference this from such a function, it’s taken from the outer “normal” function
+
+      // Task 1
+      // ---------------------------------------------------------------
+
+      function makeUserA(name) {
+        // Property value shorthand
+
+        return {
+          name,
+          ref: this, // strict mode ? undefined : global object (window in a browser)
+        };
+      }
+
+      let userA = makeUserA("John"); // this call-time
+
+      alert(userA.ref); // window
+      // alert(user.ref.name); // error
+
+      // ---------------------------------------------------------------
+
+      function makeUserB(name) {
+        // Method shorthand
+        //
+        // In almost all cases, the shorter syntax is preferred
+        // But the notations are not fully identical
+        // There are subtle differences related to object inheritance
+
+        return {
+          name,
+          ref() {
+            return this; // “object before the dot”
+          },
+        };
+      }
+
+      let userB = makeUserB("John");
+
+      alert(userB.ref()); // userB // this call-time
+      alert(userB.ref().name); // John // this call-time
+
+      // Task 2
+      // ---------------------------------------------------------------
+
+      let calculator = {
+        read() {
+          this.a = +prompt("A:", "");
+          this.b = +prompt("B:", "");
+        },
+        sum() {
+          return this.a + this.b;
+        },
+        mul() {
+          return this.a * this.b;
+        },
+      };
+
+      calculator.read();
+
+      alert(calculator.sum());
+      alert(calculator.mul());
+
+      // Task 3
+      // ---------------------------------------------------------------
+
+      // Chainable methods are widely used across JavaScript libraries
+
+      let ladder = {
+        step: 0,
+
+        up() {
+          this.step++;
+
+          return this; // chainable
+        },
+        down() {
+          this.step--;
+
+          return this;
+        },
+        showStep() {
+          alert(this.step);
+
+          return this;
+        },
+      };
+
+      ladder.up().up().down().showStep().down().showStep(); // shows 1, then 0
+    </script>
+  </body>
+</html>
