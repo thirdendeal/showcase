@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.5 Task 1-3</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/constructor-new -->
+
+    <script>
+      // Constructor functions
+      //
+      // Regular functions, adhering to two conventions though:
+      // - They are named with capital letter first
+      //   --> To make it clear that a function is to be run with new
+      // - They should be executed only with the "new" operator
+      //
+      // Any function except arrow functions (no this) can be used as a constructor
+
+      // The new operator
+      //
+      // When a function is executed with new, it does the following steps:
+      // - A new empty object is created and assigned to this
+      // - The function body executes. Usually it modifies this, adds new properties to it
+      // - The value of this is returned
+
+      // ---------------------------------------------------------------
+
+      // JavaScript constructors
+      //
+      // Many built-in language objects are constructor based (Date, Map, Set etc)
+
+      // Task 1
+      // ---------------------------------------------------------------
+
+      // Return from constructors
+      //
+      // If there is a return statement, then the rule is simple:
+      // - If return is called with an object, then the object is returned instead of this
+      // - If return is called with a primitive, it’s ignored
+
+      let previouslyDefinedObject = {};
+
+      function A() {
+        return previouslyDefinedObject; // object returned instead of this
+      }
+
+      function B() {
+        return previouslyDefinedObject; // object returned instead of this
+      }
+
+      let a = new A();
+      let b = new B();
+
+      alert(a == b); // true
+
+      // Task 2
+      // ---------------------------------------------------------------
+
+      function Calculator() {
+        // this = {}; (implicitly)
+
+        this.read = function () {
+          this.a = +prompt("A:", "");
+          this.b = +prompt("B:", "");
+        };
+
+        this.sum = function () {
+          return this.a + this.b;
+        };
+        this.mul = function () {
+          return this.a * this.b;
+        };
+
+        // return this; (implicitly)
+      }
+
+      // Omitting parentheses
+      //
+      // We can omit parentheses after new, though that is not considered a “good style”
+
+      let calc = new Calculator();
+      // let calc = new Calculator; // works the same
+
+      calc.read();
+
+      alert(`Sum of ${calc.a} and ${calc.b}: ${calc.sum()}`);
+      alert(`Multiplication of ${calc.a} and ${calc.b}: ${calc.mul()}`);
+
+      // Task 3
+      // ---------------------------------------------------------------
+
+      // Constructor mode test: new.target
+      //
+      // Used inside a function to know whether it was called with:
+      // - new, “in constructor mode” -> returns the function
+      // - or without it, “in regular mode” -> returns undefined
+
+      function Accumulator(initialValue) {
+        // This approach is sometimes used in libraries to make the syntax more flexible
+        if (!new.target) {
+          return new Accumulator(initialValue); // if you run me without new I will add new for you
+        }
+
+        this.value = initialValue;
+
+        this.read = function () {
+          this.value += +prompt(`Value to accumulate to ${this.value}:`, "");
+        };
+      }
+
+      // let accumulator = new Accumulator(1);
+      let accumulator = Accumulator(1); // redirects to new Accumulator(1)
+
+      accumulator.read();
+      accumulator.read();
+
+      alert(accumulator.value);
+    </script>
+  </body>
+</html>
