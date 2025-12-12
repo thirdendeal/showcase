@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.1 Task 1-4</title>
+  </head>
+  <body>
+    <!-- https://javascript.info/object -->
+
+    <script>
+      // Objects
+      //
+      // Associative arrays with several special features
+      //
+      // Properties (key-value pairs):
+      // - Keys must be strings or symbols
+      //   --> There are no limitations on property names
+      //   --> Other types are automatically converted to strings
+      // - Values can be of any type
+      //
+      // Access:
+      // - Dot notation: object.property
+      // - Square brackets notation object["property"]
+
+      // Additional operators
+      //
+      // To delete a property: delete object.property
+      // To check if a property with the given key exists: "key" in object
+      // - Reading a non-existing property just returns undefined
+      // To iterate over an object: for (let key in object) loop
+      // - “Integer properties” are sorted, others appear in creation order
+
+      // Task 1
+      // ---------------------------------------------------------------
+
+      // let user = new Object(); // "object constructor" syntax
+      let user = {}; // "object literal" or "curly/figure brackets" syntax
+
+      user.name = "John";
+      user.surname = "Smith";
+
+      user.name = "Pete";
+
+      delete user.name;
+
+      // Task 2
+      // ---------------------------------------------------------------
+
+      function isEmpty(object) {
+        for (let key in object) {
+          return false;
+        }
+
+        return true;
+      }
+
+      let schedule = {};
+      alert(isEmpty(schedule)); // true
+
+      schedule["8:30"] = "get up";
+      alert(isEmpty(schedule)); // false
+
+      // Task 3
+      // ---------------------------------------------------------------
+
+      let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130,
+      };
+
+      let sum = 0;
+
+      for (let key in salaries) {
+        sum += salaries[key];
+      }
+
+      alert(sum); // 390
+
+      // Task 4
+      // ---------------------------------------------------------------
+
+      function multiplyNumeric(object) {
+        for (let key in object) {
+          if (typeof object[key] != "number") continue;
+
+          object[key] *= 2;
+        }
+      }
+
+      let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu",
+      };
+
+      multiplyNumeric(menu);
+
+      alert(menu.width); // 400
+      alert(menu.height); // 600
+      alert(menu.title); // My menu
+    </script>
+  </body>
+</html>
