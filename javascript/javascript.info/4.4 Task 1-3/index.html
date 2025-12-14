@@ -63,7 +63,7 @@
       // Arrow functions are special: they don’t have their “own” this
       // If we reference this from such a function, it’s taken from the outer “normal” function
 
-      // Task 1
+      // Task 1 - Using "this" in object literal
       // ---------------------------------------------------------------
 
       function makeUserA(name) {
@@ -102,7 +102,7 @@
       alert(userB.ref()); // userB // this call-time
       alert(userB.ref().name); // John // this call-time
 
-      // Task 2
+      // Task 2 - Create a calculator
       // ---------------------------------------------------------------
 
       let calculator = {
@@ -123,7 +123,7 @@
       alert(calculator.sum());
       alert(calculator.mul());
 
-      // Task 3
+      // Task 3 - Chaining
       // ---------------------------------------------------------------
 
       // Chainable methods are widely used across JavaScript libraries

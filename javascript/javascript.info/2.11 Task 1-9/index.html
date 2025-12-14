@@ -39,14 +39,14 @@
       //
       // Neither null nor undefined
 
-      // Task 1
+      // Task 1 - What's the result of OR?
       // ---------------------------------------------------------------
 
       alert(null || 2 || undefined); // OR chain evaluates to 2
 
       // alert(2);
 
-      // Task 2
+      // Task 2 - What's the result of OR'ed alerts?
       // ---------------------------------------------------------------
 
       alert(alert(1) || 2 || alert(3)); // alert(1) runs, no explicit return value = undefined
@@ -56,14 +56,14 @@
 
       // alert(3) never runs due to short-circuit evaluation
 
-      // Task 3
+      // Task 3 - What is the result of AND?
       // ---------------------------------------------------------------
 
       alert(1 && null && 2); // AND chain evaluates to null
 
       // alert(null);
 
-      // Task 4
+      // Task 4 - What is the result of AND'ed alerts?
       // ---------------------------------------------------------------
 
       alert(alert(1) && alert(2)); // alert(1) runs, no explicit return value = undefined
@@ -73,7 +73,7 @@
 
       // alert(2) never runs due to short-circuit evaluation
 
-      // Task 5
+      // Task 5 - The result of OR AND OR
       // ---------------------------------------------------------------
 
       alert(null || (2 && 3) || 4); // OR chain evaluates to (2 && 3)
@@ -81,7 +81,7 @@
       // alert(2 && 3);
       // alert(3);
 
-      // Task 6
+      // Task 6 - Check the range between
       // ---------------------------------------------------------------
 
       let age = +prompt("Age:", "");
@@ -92,7 +92,7 @@
         alert(`${age} is within 14 and 90 inclusively`);
       }
 
-      // Task 7
+      // Task 7 - Check the range outside
       // ---------------------------------------------------------------
 
       if (!withinRange) {
@@ -105,7 +105,7 @@
         alert(`In other words ${age} is less than 14 OR greater than 90`);
       }
 
-      // Task 8
+      // Task 8 - A question about "if"
       // ---------------------------------------------------------------
 
       if (-1 || 0) alert("first");
@@ -130,7 +130,7 @@
 
       // alert("third");
 
-      // Task 9
+      // Task 9 - Check the login
       // ---------------------------------------------------------------
 
       let login = prompt("Login:", "");
