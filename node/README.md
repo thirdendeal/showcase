@@ -6,3 +6,4 @@
 2. [Console](nodejs.org/console/console.js)
 3. [Read Line](nodejs.org/readline/readline.js)
 4. [Environment Variables](nodejs.org/env/env.js)
+5. [HTTP](nodejs.org/http/http.js)
