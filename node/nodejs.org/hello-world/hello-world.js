@@ -1,4 +1,4 @@
-// Hello World
+// Hello, World!
 // ---------------------------------------------------------------------
 //
 // https://nodejs.org/en/learn/command-line/run-nodejs-scripts-from-the-command-line
@@ -16,4 +16,4 @@
 
 // ---------------------------------------------------------------------
 
-console.log("Hello, Node.js!");
+console.log("Hello, World!");
