@@ -8,3 +8,4 @@
 4. [Environment Variables](nodejs.org/env/env.js)
 5. [HTTP](nodejs.org/http/http.js)
 6. [File System](nodejs.org/fs/fs.js)
+7. [Path](nodejs.org/path/path.js)
