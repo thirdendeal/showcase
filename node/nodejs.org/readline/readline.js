@@ -1,4 +1,4 @@
-// Read Line
+// Readline
 // ---------------------------------------------------------------------
 //
 // https://nodejs.org/en/learn/command-line/accept-input-from-the-command-line-in-nodejs
