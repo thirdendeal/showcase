@@ -2,6 +2,7 @@
 // ---------------------------------------------------------------------
 //
 // https://nodejs.org/en/learn/manipulating-files/nodejs-file-stats
+// https://nodejs.org/en/learn/manipulating-files/reading-files-with-nodejs
 
 import fs from "node:fs";
 
@@ -27,22 +28,24 @@ function printFileInfo(path, stats) {
   console.log("Is it a directory?     => " + stats.isDirectory());
   console.log("Is it a symbolic link? => " + stats.isDirectory());
   console.log("Bytes?                 => " + stats.size);
+
+  console.log(); // neline separator
 }
 
 // ---------------------------------------------------------------------
 // Asynchronous
 // ---------------------------------------------------------------------
 
-const fileA = join(__dirname, "test/test.txt");
+const textFile = join(__dirname, "test/test.txt");
 
-fs.stat(fileA, (err, stats) => {
+fs.stat(textFile, (err, stats) => {
   if (err) {
     console.error(err);
 
     return;
   }
 
-  printFileInfo(fileA, stats); // we have access to the file stats in `stats`
+  printFileInfo(textFile, stats); // we have access to the file stats in `stats`
 });
 
 // ---------------------------------------------------------------------
@@ -51,12 +54,31 @@ fs.stat(fileA, (err, stats) => {
 //
 // Blocks the thread until the file stats are ready
 
-const fileB = join(__dirname, "test");
+const directory = join(__dirname, "test");
 
 try {
-  const stats = fs.statSync(fileB);
+  const stats = fs.statSync(directory);
 
-  printFileInfo(fileB, stats);
+  printFileInfo(directory, stats);
 } catch (err) {
   console.error(err);
 }
+
+// ---------------------------------------------------------------------
+// Reading files with Node.js
+// ---------------------------------------------------------------------
+//
+// Node.js readFile functions read the full content of the file in memory before returning the data
+
+// Alternatively, you can use the synchronous version fs.readFileSync()
+
+fs.readFile(textFile, "utf8", (err, data) => {
+  if (err) {
+    console.error(err);
+
+    return;
+  }
+
+  console.log(`Content of "${textFile}":`);
+  console.log(data);
+});
