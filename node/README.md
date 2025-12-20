@@ -1,6 +1,6 @@
 # Node.js
 
-## nodejs.org
+## Learn Node.js
 
 1. [Hello, World!](nodejs.org/hello-world/hello-world.js)
 2. [Console](nodejs.org/console/console.js)
