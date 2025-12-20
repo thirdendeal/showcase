@@ -5,8 +5,10 @@
 // https://nodejs.org/en/learn/manipulating-files/reading-files-with-nodejs
 // https://nodejs.org/en/learn/manipulating-files/writing-files-with-nodejs
 // https://nodejs.org/en/learn/manipulating-files/working-with-file-descriptors-in-nodejs
+// https://nodejs.org/en/learn/manipulating-files/working-with-folders-in-nodejs
 
 import fs from "node:fs";
+import path from "node:path";
 
 // ---------------------------------------------------------------------
 
@@ -17,10 +19,6 @@ import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-
-// ---------------------------------------------------------------------
-
-import { join } from "node:path";
 
 // ---------------------------------------------------------------------
 
@@ -40,7 +38,7 @@ function printFileInfo(path, stats) {
 //  Getting information out of a file
 // ---------------------------------------------------------------------
 
-const textFile = join(__dirname, "test/test.txt");
+const textFile = path.join(__dirname, "test/test.txt");
 
 fs.stat(textFile, (err, stats) => {
   if (err) {
@@ -54,7 +52,7 @@ fs.stat(textFile, (err, stats) => {
 
 // Synchronous version: fs.statSync()
 
-const directory = join(__dirname, "test");
+const directory = path.join(__dirname, "test");
 
 try {
   const stats = fs.statSync(directory);
@@ -88,7 +86,7 @@ fs.readFile(textFile, "utf8", (err, data) => {
 //
 // File system flags: https://nodejs.org/api/fs.html#file-system-flags
 
-const newTextFile = join(__dirname, "test/ignore.txt");
+const newTextFile = path.join(__dirname, "test/ignore.txt");
 const newTextFileContent = "This file was written by the file system script\n";
 
 // fs.writeFile() default flag: "w"
@@ -162,3 +160,28 @@ fs.open(textFile, "r", (err, fdA) => {
 });
 
 // Synchronous version: fs.openSync ()
+
+// ---------------------------------------------------------------------
+// Working with directories
+// ---------------------------------------------------------------------
+
+// lstat: if symbolic link, then it returns information about the link itself
+
+const directoryContentBySize = fs
+  .readdirSync(directory) // returns their relative path
+  .map((file) => {
+    return path.join(directory, file); // gets you the absolute path
+  })
+  .sort((fileA, fileB) => {
+    return fs.lstatSync(fileA).size - fs.lstatSync(fileB).size;
+  })
+  .map((file) => {
+    return path.basename(file);
+  });
+
+// Use fs.readdir() or fs.readdirSync() or fsPromises.readdir() to read the contents of a directory
+
+console.log('Contents of "test" directory by size:');
+console.log(directoryContentBySize);
+
+console.log(); // newline separator
