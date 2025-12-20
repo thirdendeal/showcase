@@ -4,6 +4,7 @@
 // https://nodejs.org/en/learn/manipulating-files/nodejs-file-stats
 // https://nodejs.org/en/learn/manipulating-files/reading-files-with-nodejs
 // https://nodejs.org/en/learn/manipulating-files/writing-files-with-nodejs
+// https://nodejs.org/en/learn/manipulating-files/working-with-file-descriptors-in-nodejs
 
 import fs from "node:fs";
 
@@ -24,13 +25,15 @@ import { join } from "node:path";
 // ---------------------------------------------------------------------
 
 function printFileInfo(path, stats) {
-  console.log("Path?                  => " + `"${path}"`);
-  console.log("Is it a file?          => " + stats.isFile());
-  console.log("Is it a directory?     => " + stats.isDirectory());
-  console.log("Is it a symbolic link? => " + stats.isDirectory());
-  console.log("Bytes?                 => " + stats.size);
+  console.log(`"${path}"`);
 
-  console.log(); // neline separator
+  console.log(".isFile() =>", stats.isFile());
+  console.log(".isDirectory() =>", stats.isDirectory());
+  console.log(".isSymbolicLink() =>", stats.isSymbolicLink());
+
+  console.log(".size() =>", stats.size); // in bytes
+
+  console.log(); // newline separator
 }
 
 // ---------------------------------------------------------------------
@@ -74,8 +77,7 @@ fs.readFile(textFile, "utf8", (err, data) => {
     return;
   }
 
-  console.log(`Content of "${textFile}":`);
-  console.log(data);
+  console.log(`Content of "${textFile}":`, data);
 });
 
 // Synchronous version: fs.readFileSync()
@@ -101,7 +103,7 @@ fs.writeFile(newTextFile, newTextFileContent, (err) => {
   } else {
     console.log(`File "${newTextFile}" written successfully`);
 
-    console.log(); // neline separator
+    console.log(); // newline separator
   }
 });
 
@@ -118,10 +120,45 @@ fs.appendFile(newTextFile, newTextFileContent, { flag: "ax" }, (err) => {
   if (err) {
     console.log(`Could not append ("ax") to "${newTextFile}"`);
 
-    console.log(); // neline separator
+    console.log(); // newline separator
   } else {
     // Won't reach
   }
 });
 
 // Synchronous version: fs.appendFileSync()
+
+// ---------------------------------------------------------------------
+// Working with file descriptors
+// ---------------------------------------------------------------------
+//
+// A file descriptor is a reference to an open file
+
+// fs.open() default flag: "r"
+//
+// "r": Open file for reading, an exception occurs if the file does not exist
+
+fs.open(textFile, "r", (err, fdA) => {
+  if (err) {
+    console.error(err);
+
+    return;
+  }
+
+  fs.open(textFile, "r", (err, fdB) => {
+    if (err) {
+      console.error(err);
+
+      return;
+    }
+
+    // Here a file descriptor (fd) is a number that uniquely identifies an open file
+
+    console.log(`1st file descriptor: ${fdA}`);
+    console.log(`2nd file descriptor: ${fdB}`);
+
+    console.log(); // newline separator
+  });
+});
+
+// Synchronous version: fs.openSync ()
