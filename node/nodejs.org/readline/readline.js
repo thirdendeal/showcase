@@ -5,9 +5,9 @@
 
 // Get input from a readable stream
 
-// ---------------------------------------------------------------------
-
 import readline from "node:readline";
+
+// ---------------------------------------------------------------------
 
 const rl = readline.createInterface({
   input: process.stdin, // the terminal input, one line at a time

@@ -20,7 +20,7 @@ const __dirname = dirname(__filename);
 import { join } from "node:path";
 
 // ---------------------------------------------------------------------
-// Reading files with Node.js
+// Reading files
 // ---------------------------------------------------------------------
 
 // A better option to read the content of big files is using streams

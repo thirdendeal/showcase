@@ -3,11 +3,11 @@
 //
 // https://nodejs.org/en/learn/http/anatomy-of-an-http-transaction
 
+import http from "node:http";
+
 // ---------------------------------------------------------------------
 // Create the Server
 // ---------------------------------------------------------------------
-
-import http from "node:http";
 
 // The Server object returned by createServer is an EventEmitter
 
