@@ -14,6 +14,13 @@
 // A Node.js app runs in a single process, without creating a new thread for every request
 // WebAssembly, a high-performance language that can be compiled from various languages, is also supported
 
+// Asynchronous Programming
+//
+// JavaScript is single threaded (cannot run in parallel) and synchronous by default
+// At its core, JavaScript is designed to be non-blocking on the "main" thread
+//
+// Node.js also provides a non-blocking I/O environment to file access, network calls and so on
+
 // ---------------------------------------------------------------------
 
 console.log("Hello, World!");
