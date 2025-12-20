@@ -12,3 +12,4 @@
 8. [File System - Big Files](nodejs.org/fs/fs-big-files.js)
 9. [Callbacks](nodejs.org/callbacks/callbacks.js)
 10. [Promises](nodejs.org/promises/promises.js)
+11. [Promises - Async/Await](nodejs.org/promises/promises-async-await.js)
