@@ -16,3 +16,4 @@
 12. [Promises - Static Methods](nodejs.org/promises/promises-static-methods.js)
 13. [File System - Promises](nodejs.org/fs/fs-promises.js)
 14. [Timers](nodejs.org/timers/timers.js)
+15. [Event Loop](nodejs.org/event-loop/event-loop.js)
