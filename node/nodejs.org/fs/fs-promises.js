@@ -34,7 +34,7 @@ async function printContent(file) {
 
 // ---------------------------------------------------------------------
 
-const textFile = path.join(__dirname, "test/test.txt");
+const textFile = path.join(__dirname, "files/test.txt");
 
 printContent(textFile);
 console.log("Not done reading yet...");

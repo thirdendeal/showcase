@@ -45,7 +45,7 @@ async function readFile(filePath) {
   }
 }
 
-const bigTextFile = join(__dirname, "test/one-hundred-thousand-numbers.txt");
+const bigTextFile = join(__dirname, "files/one-hundred-thousand-numbers.txt");
 
 try {
   await readFile(bigTextFile);

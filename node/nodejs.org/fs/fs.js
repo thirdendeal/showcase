@@ -38,7 +38,7 @@ function printFileInfo(path, stats) {
 //  Getting information out of a file
 // ---------------------------------------------------------------------
 
-const textFile = path.join(__dirname, "test/test.txt");
+const textFile = path.join(__dirname, "files/test.txt");
 
 fs.stat(textFile, (err, stats) => {
   if (err) {
@@ -52,7 +52,7 @@ fs.stat(textFile, (err, stats) => {
 
 // Synchronous version: fs.statSync()
 
-const directory = path.join(__dirname, "test");
+const directory = path.join(__dirname, "files");
 
 try {
   const stats = fs.statSync(directory);
@@ -86,7 +86,7 @@ fs.readFile(textFile, "utf8", (err, data) => {
 //
 // File system flags: https://nodejs.org/api/fs.html#file-system-flags
 
-const newTextFile = path.join(__dirname, "test/ignore.txt");
+const newTextFile = path.join(__dirname, "files/ignore.txt");
 const newTextFileContent = "This file was written by the file system script\n";
 
 // fs.writeFile() default flag: "w"
