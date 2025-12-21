@@ -2,10 +2,25 @@
 // ---------------------------------------------------------------------
 //
 // https://nodejs.org/en/learn/asynchronous-work/discover-javascript-timers
+// https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick
 
 // Zero delay setTimeout() as a browser-ready setImmediate()
 //
 // Avoids blocking the CPU on intensive tasks by queuing functions in the scheduler
+
+// ---------------------------------------------------------------------
+// Thresholds rather than exact time
+// ---------------------------------------------------------------------
+//
+// A timer specifies the threshold after which a provided callback may be executed
+
+const setTimeoutStart = Date.now();
+
+setTimeout(() => {
+  const delay = Date.now() - setTimeout;
+
+  console.log(`${delay} ms have passed since this 100 ms setTimeout`);
+}, 100); //
 
 // ---------------------------------------------------------------------
 // setTimeout()
