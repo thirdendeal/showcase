@@ -13,3 +13,4 @@
 9. [Callbacks](nodejs.org/callbacks/callbacks.js)
 10. [Promises](nodejs.org/promises/promises.js)
 11. [Promises - Async/Await](nodejs.org/promises/promises-async-await.js)
+12. [Promises - Static Methods](nodejs.org/promises/promises-static-methods.js)
