@@ -3,6 +3,7 @@
 //
 // https://nodejs.org/en/learn/asynchronous-work/discover-promises-in-nodejs
 // https://nodejs.org/en/learn/asynchronous-work/overview-of-blocking-vs-non-blocking
+// https://nodejs.org/en/learn/asynchronous-work/understanding-setimmediate
 
 // Phases of the event loop
 //
@@ -19,6 +20,16 @@
 //
 // A queue and a hard maximum of callbacks to be exhausted
 // At which point the event loop will move to the next phase
+
+// ---------------------------------------------------------------------
+
+// Event loop queues (in execution order)
+//
+// process.nextTick               process.nextTick queue
+// Promise.then()                 promises microtask queue
+// setTimeout and setimmediate    macrotask queue
+
+// ---------------------------------------------------------------------
 
 import fs from "node:fs";
 
@@ -67,6 +78,7 @@ console.log("Synchronous task A executed");
 //
 // All next tick callbacks are resolved before the event loop continues
 // This may prevent the event loop from reaching the poll phase
+// That's also why it will always execute before setTimeout and setImmediate
 
 // ---------------------------------------------------------------------
 // setImmediate() vs zero delay setTimeout
