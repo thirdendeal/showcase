@@ -26,6 +26,8 @@ async function performTasks() {
     console.log(resultC);
   } catch (error) {
     console.error(error);
+  } finally {
+    console.log("performTasks() completed");
   }
 }
 
