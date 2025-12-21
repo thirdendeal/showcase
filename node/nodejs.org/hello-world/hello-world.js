@@ -2,6 +2,7 @@
 // ---------------------------------------------------------------------
 //
 // https://nodejs.org/en/learn/command-line/run-nodejs-scripts-from-the-command-line
+// https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick
 
 // Node.js
 //
@@ -14,12 +15,27 @@
 // A Node.js app runs in a single process, without creating a new thread for every request
 // WebAssembly, a high-performance language that can be compiled from various languages, is also supported
 
+// The libuv C library
+//
+// Implements the event loop and all of the asynchronous behaviors of the platform
+
 // Asynchronous Programming
 //
 // JavaScript is single threaded (cannot run in parallel) and synchronous by default
 // At its core, JavaScript is designed to be non-blocking on the "main" thread
+
+// Blocking
 //
-// Node.js also provides a non-blocking I/O environment to file access, network calls and so on
+// When additional JavaScript must wait until a non-JavaScript operation completes
+
+// Non-blocking by default
+//
+// All of the I/O methods in the Node.js standard library provide asynchronous versions
+// Some methods also have blocking counterparts, which have names that end with Sync
+
+// Asynchronous design philosophy
+//
+// An API should always be asynchronous even where it doesn't have to be
 
 // ---------------------------------------------------------------------
 
