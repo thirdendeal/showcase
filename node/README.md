@@ -18,3 +18,4 @@
 14. [Timers](nodejs.org/timers/timers.js)
 15. [Event Loop](nodejs.org/event-loop/event-loop.js)
 16. [Event Emitter](nodejs.org/events/eventemitter.js)
+17. [TypeScript](nodejs.org/typescript/typescript.ts)
