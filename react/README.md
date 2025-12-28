@@ -13,3 +13,4 @@
 ## React Tutorial ([w3schools.com](https://www.w3schools.com/react/default.asp))
 
 1. [Hello, World!](hello-world/src/App.jsx)
+2. [JSX](jsx/src/App.jsx)
