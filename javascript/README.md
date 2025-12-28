@@ -10,7 +10,7 @@
 4. [Interaction: alert, prompt, confirm (Task 1)](modals/index.html)
 5. [Basic operators, maths (Task 1-4)](operators/index.html)
 6. [Comparisons (Task 1)](comparisons/index.html)
-7. [Conditional branching: if, '?' (Task 1-5)](conditions/index.html)
+7. [Conditional branching: if, '?' (Task 1-5)](conditionals/index.html)
 8. [Logical operators (Task 1-9)](logical-operators/index.html)
 9. [Loops: while and for (Task 1-7)](loops/index.html)
 10. [The "switch" statement (Task 1-2)](switch/index.html)
