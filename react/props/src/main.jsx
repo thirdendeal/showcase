@@ -3,7 +3,7 @@
 
 import { createRoot } from "react-dom/client";
 
-import { Car, DetailedCar } from "./Vehicles.jsx";
+import { Car, DetailedCar, BlueEnthusiastCar, Garage } from "./Vehicles.jsx";
 
 // ---------------------------------------------------------------------
 
@@ -13,7 +13,10 @@ createRoot(rootNode).render(
   <>
     <h1>More Cars!</h1>
 
-    <Car brand="BMW" />
-    <DetailedCar brand="Ford" model="Mustang" color="red" year={1969} />
+    <Garage>
+      <Car brand="BMW" />
+      <BlueEnthusiastCar />
+      <DetailedCar brand="Ford" model="Mustang" color="red" year={1969} />
+    </Garage>
   </>
 );

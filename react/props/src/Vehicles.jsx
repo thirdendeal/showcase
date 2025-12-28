@@ -14,7 +14,7 @@
 // A component receives its arguments as an object
 
 function Car(props) {
-  return <h2>I am a {props.brand}!</h2>; // it doesn't have to be named `props`
+  return <h3>I am a {props.brand}!</h3>; // it doesn't have to be named `props`
 }
 
 // <Car brand="" />
@@ -27,9 +27,9 @@ function Car(props) {
 
 function DetailedCar(props) {
   return (
-    <h2>
+    <h3>
       I am a {props.color} {props.brand} {props.model} from {props.year}!
-    </h2>
+    </h3>
   );
 }
 
@@ -45,4 +45,38 @@ function DetailedCar(props) {
 
 // ---------------------------------------------------------------------
 
-export { Car, DetailedCar };
+// Destructuring Props
+//
+// You can limit the properties a component receives by using destructuring
+
+// Default Values
+//
+// With Destructuring, you can set default values for props
+
+function BlueEnthusiastCar({ color = "blue" }) {
+  return <h3>My car is {color}!</h3>;
+}
+
+// <BlueEnthusiastCar [color=""] />
+
+// ---------------------------------------------------------------------
+
+// Props Children
+//
+// The content between the opening and closing tags of a component
+
+function Garage(props) {
+  return (
+    <>
+      <h2>Who lives in my Garage?</h2>
+
+      {props.children}
+    </>
+  );
+}
+
+// <Garage> [...] </Garage>;
+
+// ---------------------------------------------------------------------
+
+export { Car, DetailedCar, BlueEnthusiastCar, Garage };
