@@ -1,7 +1,5 @@
 // Components
 // ---------------------------------------------------------------------
-//
-// Like functions, but  work in isolation and return HTML
 
 import { createRoot } from "react-dom/client";
 

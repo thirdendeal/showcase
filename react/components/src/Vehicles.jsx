@@ -1,7 +1,8 @@
-// Vehicles
+// Components (Vehicles.jsx)
 // ---------------------------------------------------------------------
-
-// Note that the filename must start with an uppercase character
+//
+// Like functions, but  work in isolation and return HTML
+// - Note that the filename must start with an uppercase character
 
 // ---------------------------------------------------------------------
 
@@ -13,7 +14,7 @@ function Car() {
   return <h2>Hi, I am a Car!</h2>; // React components return HTML code
 }
 
-// To use a component refer to it like an empty tag
+// <Car />
 
 // ---------------------------------------------------------------------
 
@@ -25,7 +26,7 @@ function ColorCar(props) {
   return <h2>I am a {props.color} Car!</h2>; // React components return HTML code
 }
 
-// To pass a property to a component use an attribute
+// <ColorCar color="" />
 
 // ---------------------------------------------------------------------
 
@@ -41,6 +42,8 @@ function Garage() {
     </>
   );
 }
+
+// <Garage />
 
 // ---------------------------------------------------------------------
 
