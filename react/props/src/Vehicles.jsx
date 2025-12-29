@@ -1,7 +1,8 @@
-// Props (Vehicles.jsx)
+// Vehicles
 // ---------------------------------------------------------------------
-//
-// Props are arguments passed into React components via HTML attributes
+
+// Props
+// ---------------------------------------------------------------------
 
 // Props are read-only
 //

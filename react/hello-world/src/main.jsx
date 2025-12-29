@@ -1,3 +1,6 @@
+// Main
+// ---------------------------------------------------------------------
+
 // Hello, World!
 // ---------------------------------------------------------------------
 
@@ -7,8 +10,8 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 
 // ---------------------------------------------------------------------
+
 // Render HTML
-// ---------------------------------------------------------------------
 //
 // React renders HTML to the web page via a container, and a function called createRoot()
 
@@ -17,6 +20,8 @@ import App from "./App.jsx";
 // The HTML element where you want to use as a container for content
 
 const rootNode = document.getElementById("root"); // container
+
+// ---------------------------------------------------------------------
 
 // The createRoot Function
 //

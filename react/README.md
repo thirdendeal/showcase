@@ -14,6 +14,6 @@
 
 1. [Hello, World!](hello-world/src/App.jsx)
 2. [JSX](jsx/src/App.jsx)
-3. [Components](components/src/Vehicles.jsx)
-4. [Props](props/src/Vehicles.jsx)
+3. [Components](components/src/App.jsx)
+4. [Props](props/src/App.jsx)
 5. [Lists](lists/src/App.jsx)

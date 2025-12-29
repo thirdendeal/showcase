@@ -1,17 +1,20 @@
+// Main
+// ---------------------------------------------------------------------
+
 // Components
 // ---------------------------------------------------------------------
 
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import { ColorCar, Garage } from "./Vehicles.jsx";
+import App from "./App.jsx";
 
 // ---------------------------------------------------------------------
 
 const rootNode = document.getElementById("root");
 
 createRoot(rootNode).render(
-  <>
-    <Garage />
-    <ColorCar color="red" />
-  </>
+  <StrictMode>
+    <App />
+  </StrictMode>
 );

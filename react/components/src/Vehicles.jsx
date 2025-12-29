@@ -1,8 +1,10 @@
-// Components (Vehicles.jsx)
+// Vehicles
 // ---------------------------------------------------------------------
-//
+
+// Components
+// ---------------------------------------------------------------------
+
 // Like functions, but  work in isolation and return HTML
-// - Note that the filename must start with an uppercase character
 
 // ---------------------------------------------------------------------
 
