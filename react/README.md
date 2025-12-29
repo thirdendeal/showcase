@@ -17,3 +17,4 @@
 3. [Components](components/src/App.jsx)
 4. [Props](props/src/App.jsx)
 5. [Lists](lists/src/App.jsx)
+6. [Forms](forms/src/App.jsx)
