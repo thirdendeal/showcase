@@ -1,0 +1,25 @@
+/* Module */
+/* ------------------------------------------------------------------ */
+
+/* Styling */
+/* ------------------------------------------------------------------ */
+
+/* This will affect the entire page */
+
+body {
+  color: white;
+}
+
+/* ------------------------------------------------------------------ */
+
+.heading {
+  font-style: italic;
+}
+
+/* `composes` respects cascading order */
+
+.div {
+  composes: heading;
+
+  text-align: right;
+}

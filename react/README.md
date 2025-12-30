@@ -20,3 +20,4 @@
 6. [Forms](forms/src/App.jsx)
 7. [Portals](portals/src/App.jsx)
 8. [Suspense](suspense/src/App.jsx)
+9. [Styling](styling/src/App.jsx)
