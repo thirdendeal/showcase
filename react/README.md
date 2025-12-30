@@ -18,3 +18,4 @@
 4. [Props](props/src/App.jsx)
 5. [Lists](lists/src/App.jsx)
 6. [Forms](forms/src/App.jsx)
+7. [Portals](portals/src/App.jsx)
