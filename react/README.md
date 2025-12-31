@@ -10,6 +10,10 @@
     npm install
     npm run dev
 
+### React Router
+
+    npm install react-router-dom
+
 ## React Tutorial ([w3schools.com](https://www.w3schools.com/react/default.asp))
 
 1. [Hello, World!](hello-world/src/App.jsx)
@@ -21,3 +25,4 @@
 7. [Portals](portals/src/App.jsx)
 8. [Suspense](suspense/src/App.jsx)
 9. [Styling](styling/src/App.jsx)
+10. [React Router](react-router/src/App.jsx)
