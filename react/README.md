@@ -26,3 +26,4 @@
 8. [Suspense](suspense/src/App.jsx)
 9. [Styling](styling/src/App.jsx)
 10. [React Router](react-router/src/App.jsx)
+11. [Transitions](transitions/src/App.jsx)
