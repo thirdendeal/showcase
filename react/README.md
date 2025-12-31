@@ -27,3 +27,4 @@
 9. [Styling](styling/src/App.jsx)
 10. [React Router](react-router/src/App.jsx)
 11. [Transitions](transitions/src/App.jsx)
+12. [Forward Reference](forward-reference/src/App.jsx)
