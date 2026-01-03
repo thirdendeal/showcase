@@ -1,0 +1,46 @@
+// State
+// ---------------------------------------------------------------------
+
+// Hooks
+// ---------------------------------------------------------------------
+
+// The useState Hook allows us to track state in a function component
+
+import { useState } from "react";
+
+// ---------------------------------------------------------------------
+
+// Updating Objects and Arrays in State
+//
+// When state is updated, the entire state gets overwritten
+// Use the JavaScript spread operator to copy and then update through override
+//
+// setState(previousState => { ...previousState, color: "blue" })
+
+function FavoriteColor() {
+  const [color, setColor] = useState("red");
+
+  // We should never directly update state (i.e.: color = "blue")
+
+  return (
+    <>
+      <h1>My favorite color is {color}!</h1>
+      <button type="button" onClick={() => setColor("blue")}>
+        Blue
+      </button>
+      <button type="button" onClick={() => setColor("red")}>
+        Red
+      </button>
+      <button type="button" onClick={() => setColor("pink")}>
+        Pink
+      </button>
+      <button type="button" onClick={() => setColor("green")}>
+        Green
+      </button>
+    </>
+  );
+}
+
+// ---------------------------------------------------------------------
+
+export default FavoriteColor;
