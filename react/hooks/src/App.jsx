@@ -16,6 +16,7 @@ import FavoriteColor from "./State.jsx";
 import Timer from "./Effect.jsx";
 import { ByChainA, ByContextA } from "./Context.jsx";
 import DOMElementReference from "./Ref.jsx";
+import Score from "./Reducer.jsx";
 
 // ---------------------------------------------------------------------
 
@@ -37,6 +38,9 @@ function App() {
 
       <h2>Ref</h2>
       <DOMElementReference />
+
+      <h2>Reducer</h2>
+      <Score />
     </>
   );
 }
