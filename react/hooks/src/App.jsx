@@ -15,6 +15,7 @@
 import FavoriteColor from "./State.jsx";
 import Timer from "./Effect.jsx";
 import { ByChainA, ByContextA } from "./Context.jsx";
+import DOMElementReference from "./Ref.jsx";
 
 // ---------------------------------------------------------------------
 
@@ -33,6 +34,9 @@ function App() {
       <ByChainA />
       <br />
       <ByContextA />
+
+      <h2>Ref</h2>
+      <DOMElementReference />
     </>
   );
 }
