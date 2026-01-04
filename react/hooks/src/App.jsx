@@ -17,6 +17,7 @@ import Timer from "./Effect.jsx";
 import { ByChainA, ByContextA } from "./Context.jsx";
 import DOMElementReference from "./Ref.jsx";
 import Score from "./Reducer.jsx";
+import { WithoutCallback, WithCallback } from "./Callback.jsx";
 
 // ---------------------------------------------------------------------
 
@@ -41,6 +42,10 @@ function App() {
 
       <h2>Reducer</h2>
       <Score />
+
+      <h2>Callback</h2>
+      <WithoutCallback />
+      <WithCallback />
     </>
   );
 }
