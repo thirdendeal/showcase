@@ -6,6 +6,8 @@
 
 // The useState Hook allows us to track state in a function component
 
+// useState([initialValue]) -> [stateValue, setStateFunction]
+
 import { useState } from "react";
 
 // ---------------------------------------------------------------------
@@ -25,8 +27,9 @@ function FavoriteColor() {
 
   return (
     <>
-      <h3>My favorite color is {color}!</h3>
-
+      My favorite color is {color}!
+      <br />
+      <br />
       <button type="button" onClick={() => setColor("blue")}>
         Blue
       </button>
