@@ -18,6 +18,7 @@ import { ByChainA, ByContextA } from "./Context.jsx";
 import DOMElementReference from "./Ref.jsx";
 import Score from "./Reducer.jsx";
 import { WithoutCallback, WithCallback } from "./Callback.jsx";
+import { WithoutMemo, WithMemo } from "./Memo.jsx";
 
 // ---------------------------------------------------------------------
 
@@ -46,6 +47,10 @@ function App() {
       <h2>Callback</h2>
       <WithoutCallback />
       <WithCallback />
+
+      <h2>Memo</h2>
+      <WithoutMemo />
+      <WithMemo />
     </>
   );
 }
