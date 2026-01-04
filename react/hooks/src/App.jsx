@@ -13,13 +13,20 @@
 // - Hooks cannot be conditional
 
 import FavoriteColor from "./State.jsx";
+import Timer from "./Effect.jsx";
 
 // ---------------------------------------------------------------------
 
 function App() {
   return (
     <>
+      <h1>Hooks</h1>
+
+      <h2>State</h2>
       <FavoriteColor />
+
+      <h2>Effect</h2>
+      <Timer />
     </>
   );
 }
