@@ -14,6 +14,7 @@
 
 import FavoriteColor from "./State.jsx";
 import Timer from "./Effect.jsx";
+import { ByChainA, ByContextA } from "./Context.jsx";
 
 // ---------------------------------------------------------------------
 
@@ -27,6 +28,11 @@ function App() {
 
       <h2>Effect</h2>
       <Timer />
+
+      <h2>Context</h2>
+      <ByChainA />
+      <br />
+      <ByContextA />
     </>
   );
 }

@@ -45,15 +45,13 @@ function Timer() {
 
   // every render form
   useEffect(() => {
-    let timer = setTimeout(() => {
-      // when count changes, a new render will happen
-      setCount((count) => count + 1);
-    }, 1000);
+    // infinite chain of updates by rerendering count
+    let timer = setTimeout(setCount, 1000, (count) => count + 1);
 
     return () => clearTimeout(timer);
   });
 
-  return <>I've rendered {count} times!</>;
+  return <p>I've rendered {count} times!</p>;
 }
 
 // ---------------------------------------------------------------------

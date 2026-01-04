@@ -27,9 +27,8 @@ function FavoriteColor() {
 
   return (
     <>
-      My favorite color is {color}!
-      <br />
-      <br />
+      <p>My favorite color is {color}!</p>
+
       <button type="button" onClick={() => setColor("blue")}>
         Blue
       </button>
