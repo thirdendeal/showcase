@@ -3,6 +3,8 @@
 
 // Props
 // ---------------------------------------------------------------------
+//
+// https://www.w3schools.com/react/react_props.asp
 
 // Props are arguments passed into React components via HTML attributes
 

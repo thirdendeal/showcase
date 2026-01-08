@@ -3,6 +3,8 @@
 
 // Portals
 // ---------------------------------------------------------------------
+//
+// https://www.w3schools.com/react/react_portals.asp
 
 // A way to render HTML outside the parent component's DOM hierarchy
 

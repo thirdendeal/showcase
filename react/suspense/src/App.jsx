@@ -3,6 +3,8 @@
 
 // Suspense
 // ---------------------------------------------------------------------
+//
+// https://www.w3schools.com/react/react_suspense.asp
 
 // Lets you display alternative HTML while waiting for code or data to load
 

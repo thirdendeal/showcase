@@ -3,6 +3,8 @@
 
 // Transitions
 // ---------------------------------------------------------------------
+//
+// https://www.w3schools.com/react/react_transitions.asp
 
 // The useTransition Hook
 //

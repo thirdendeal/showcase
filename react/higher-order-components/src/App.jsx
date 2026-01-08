@@ -3,6 +3,8 @@
 
 // Higher Order Components
 // ---------------------------------------------------------------------
+//
+// https://www.w3schools.com/react/react_hoc.asp
 
 // Functions that take a component and return a new component
 

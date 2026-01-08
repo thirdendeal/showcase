@@ -3,6 +3,8 @@
 
 // JSX
 // ---------------------------------------------------------------------
+//
+// https://www.w3schools.com/react/react_jsx.asp
 
 // JSX stands for JavaScript XML, an extension of JavaScript
 
