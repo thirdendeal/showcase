@@ -4,3 +4,4 @@
 
 1. [Hello, World!](hello-world/app.js)
 2. [Routing](routing/app.js)
+3. [Static Files](static-files/app.js)
