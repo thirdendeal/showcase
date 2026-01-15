@@ -105,6 +105,18 @@ app.get("/plantae/:genus.:species", (request, response) => {
 
 // ---------------------------------------------------------------------
 
+// Query Parameters
+//
+// Key-value pairs that appear after the ? in a URL
+
+app.get("/search", (request, response) => {
+  const { q, category } = request.query;
+
+  response.send(`Search query: ${q}, Category: ${category || "none"}`);
+});
+
+// ---------------------------------------------------------------------
+
 // Route handlers
 //
 // Can be in the form of a function, an array of functions, or combinations of both
