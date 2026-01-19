@@ -1,5 +1,7 @@
 # JavaScript
 
+Programming language
+
 ## The Modern JavaScript Tutorial ([javascript.info](https://javascript.info/))
 
 ### JavaScript fundamentals

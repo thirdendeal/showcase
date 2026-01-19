@@ -1,5 +1,7 @@
 # React
 
+JavaScript library for building user interfaces
+
 ## Build Tool
 
 ### Vite

@@ -1,5 +1,7 @@
 # Node.js
 
+JavaScript runtime environment
+
 ## Learn Node.js ([nodejs.org](https://nodejs.org/en/learn))
 
 1. [Hello, World!](hello-world/hello-world.js)

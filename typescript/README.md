@@ -1,5 +1,7 @@
 # TypeScript
 
+Programming language, superset of JavaScript that transpiles to JavaScript
+
 ## TypeScript for JavaScript Programmers ([typescriptlang.org](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html))
 
 1. [Defining Types](defining-types/defining-types.ts)

@@ -1,5 +1,7 @@
 # Express
 
+JavaScript server-side/backend web framework for Node.js
+
 ## Getting Started ([expressjs.com](https://expressjs.com/en/starter/installing.html))
 
 1. [Hello, World!](hello-world/app.js)
