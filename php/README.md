@@ -6,3 +6,4 @@ Programming language focused on web development
 
 1. [Hello, World!](hello-world/index.php)
 2. [PHP Info](phpinfo/index.php)
+3. [Mixing Modes](mixing-modes/index.php)

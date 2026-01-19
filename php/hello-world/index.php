@@ -8,6 +8,7 @@
 </head>
 
 <body>
+
   <?php
 
   // Hello, World!
@@ -26,6 +27,7 @@
   // PHP removes the line feed immediately after the end processing instruction
 
   ?>
+
 </body>
 
 </html>
