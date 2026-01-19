@@ -20,6 +20,10 @@
   //
   // Scripting language that can be embedded into HTML
 
+  // -------------------------------------------------------------------
+
+  // PHP requires instructions to be terminated with a semicolon
+
   echo "Hello, World!";
 
   // Line Feed Collapsing
@@ -27,6 +31,16 @@
   // PHP removes the line feed immediately after the end processing instruction
 
   ?>
+
+  <br />
+  <br />
+
+  <!-- PHP Tags -->
+  <!-- ------------------------------------------------------------- -->
+
+  <?php echo 'PHP tag' ?> <!-- The closing tag implies a semicolon -->
+  <?= '|| Short echo tag' ?>
+  <? echo '|| Short tag (if enabled)' ?>
 
 </body>
 
