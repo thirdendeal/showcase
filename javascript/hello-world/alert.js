@@ -1,1 +1,1 @@
-alert("I'm Javascript (From A Separate File)");
+alert("Hello, World! (From A Separate File)");

@@ -6,7 +6,7 @@ Programming language
 
 ### JavaScript fundamentals
 
-1. [Hello, world! (Task 1-2)](hello-world/index.html)
+1. [Hello, World! (Task 1-2)](hello-world/index.html)
 2. [Variables (Task 1-3)](variables/index.html)
 3. [Data types (Task 1)](data-types/index.html)
 4. [Interaction: alert, prompt, confirm (Task 1)](modals/index.html)
