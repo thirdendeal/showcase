@@ -9,21 +9,11 @@
 
 <body>
 
-  <?php
-  if (str_contains($_SERVER['HTTP_USER_AGENT'], 'Firefox')) {
-  ?>
-
-    <p>You are using Firefox</p>
-
-  <?php
-  } else {
-  ?>
-
-    <p>You are not using Firefox</p>
-
-  <?php
-  }
-  ?>
+<?php if (str_contains($_SERVER['HTTP_USER_AGENT'], 'Firefox')): ?>
+  <p>You are using Firefox</p>
+<?php else: ?>
+  <p>You are not using Firefox</p>
+<?php endif; ?>
 
 </body>
 
