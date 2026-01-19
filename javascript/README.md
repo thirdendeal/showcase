@@ -1,6 +1,6 @@
 # JavaScript
 
-Programming language
+Programming language, core technology of the Web
 
 ## The Modern JavaScript Tutorial ([javascript.info](https://javascript.info/))
 
