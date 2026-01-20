@@ -1,4 +1,4 @@
-// Basic Routing
+// Routing (Basic)
 // ---------------------------------------------------------------------
 //
 // https://expressjs.com/en/starter/basic-routing.html
