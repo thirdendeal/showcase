@@ -1,4 +1,4 @@
-// REST API
+// Representational State Transfer API
 // ---------------------------------------------------------------------
 //
 // https://www.w3schools.com/nodejs/nodejs_rest_api.asp
@@ -43,6 +43,24 @@
 //
 // - Idempotent: Multiple identical requests should have the same effect as one (GET, PUT, DELETE)
 // - Non-Idempotent: May have different effects with multiple calls (POST, PATCH)
+
+// ---------------------------------------------------------------------
+
+// Structure and Design
+//
+// Use nouns for resources (/users not /getUsers)
+// Use plurals for collections (/users/42 not /user/42)
+// Nest resources for relationships (/users/42/orders)
+// Use query parameters for filtering (/products?category=electronics&min_price=100)
+// Keep URLs consistent (kebab-case, camelCase etc.)
+// Plan for API versioning from the start (/v1/users vs /v2/users)
+
+// API Versioning
+//
+// URI Path Versioning: /api/v1/users
+// Query Parameter: /api/users?version=1
+// Custom Header: X-API-Version: 1
+// Accept Header: Accept: application/vnd.myapi.v1+json
 
 // ---------------------------------------------------------------------
 
