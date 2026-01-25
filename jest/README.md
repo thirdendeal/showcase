@@ -14,3 +14,4 @@ JavaScript testing framework
 ## Getting Started ([jestjs.io](https://jestjs.io/docs/getting-started))
 
 1. [Expect](expect/lib.test.js)
+2. [Matchers](matchers/lib.test.js)
