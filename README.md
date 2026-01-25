@@ -6,6 +6,8 @@ Various technologies by example
 
 ## [JavaScript](javascript/README.md)
 
+## [Jest](jest/README.md)
+
 ## [Node.js](node.js/README.md)
 
 ## [PHP](php/README.md)
