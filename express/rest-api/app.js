@@ -3,10 +3,6 @@
 //
 // https://www.w3schools.com/nodejs/nodejs_rest_api.asp
 
-// REST
-//
-// Representational State Transfer
-
 // Core Concepts
 //
 // Resources: Everything is a resource (user, product, order)

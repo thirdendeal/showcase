@@ -3,7 +3,7 @@
 //
 // https://www.w3schools.com/nodejs/nodejs_api_auth.asp
 
-// Session-based authentication uses cookies to maintain user state
+// Uses cookies to maintain user state
 
 // ---------------------------------------------------------------------
 
