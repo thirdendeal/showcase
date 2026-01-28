@@ -13,20 +13,23 @@
 
 // ---------------------------------------------------------------------
 
-import express from "express";
-import bodyParser from "body-parser"; // express middleware
+const express = require("express");
+const bodyParser = require("body-parser"); // express middleware
 
-import { sign, verify } from "jsonwebtoken";
-
-const { json } = bodyParser; // CommonJS module named exports workaround
+const jwt = require("jsonwebtoken");
 
 // ---------------------------------------------------------------------
 
 const app = express();
 
 const users = [
-  { id: 1, username: "user1", password: "password1", role: "user" },
+  { id: 1, username: "admin", password: "password", role: "admin" },
+  { id: 2, username: "user1", password: "password1", role: "user" },
 ];
+
+// ---------------------------------------------------------------------
+
+app.use(bodyParser.json()); // parse application/json
 
 // ---------------------------------------------------------------------
 
@@ -54,17 +57,13 @@ const authenticateJWT = (request, response, next) => {
   }
 
   try {
-    request.user = verify(token, JWT_SECRET); // attach user (decoded jwtPayload) to request
+    request.user = jwt.verify(token, JWT_SECRET); // attach user (decoded jwtPayload) to request
 
     next();
   } catch (error) {
     return response.status(403).json({ message: "Invalid or expired token" });
   }
 };
-
-// ---------------------------------------------------------------------
-
-app.use(json()); // parse application/json
 
 // ---------------------------------------------------------------------
 
@@ -87,7 +86,7 @@ app.post("/login", (request, response) => {
     role: user.role,
   };
 
-  const token = sign(jwtPayload, JWT_SECRET, { expiresIn: "1h" });
+  const token = jwt.sign(jwtPayload, JWT_SECRET, { expiresIn: "1h" });
 
   response.json({ message: "Login successful", token });
 });
@@ -102,7 +101,7 @@ app.get("/profile", authenticateJWT, (request, response) => {
 
 // ---------------------------------------------------------------------
 
-// Role-based route
+// Protected + role-based route
 
 app.get("/admin", authenticateJWT, (request, response) => {
   if (request.user.role !== "admin") {
@@ -116,8 +115,4 @@ app.get("/admin", authenticateJWT, (request, response) => {
 
 // ---------------------------------------------------------------------
 
-const port = 3000;
-
-app.listen(port, () => {
-  console.log(`Listening on port: ${port}`);
-});
+module.exports = app;
