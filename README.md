@@ -8,6 +8,8 @@ Various technologies by example
 
 ## [Jest](jest/README.md)
 
+## [Next.js](next.js/README.md)
+
 ## [Node.js](node.js/README.md)
 
 ## [PHP](php/README.md)
