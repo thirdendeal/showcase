@@ -1,9 +1,9 @@
-//  Token-Based Authentication (JWT)
+// Token-Based Authentication (JWT)
 // ---------------------------------------------------------------------
 
-const app = require("./app");
-
 const request = require("supertest");
+
+const app = require("./app");
 
 // ---------------------------------------------------------------------
 

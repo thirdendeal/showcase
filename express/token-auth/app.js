@@ -13,6 +13,12 @@
 
 // ---------------------------------------------------------------------
 
+// JSON Web Tokens (JWT)
+//
+// Provide a stateless authentication mechanism that's compact and self-contained
+
+// ---------------------------------------------------------------------
+
 const express = require("express");
 const bodyParser = require("body-parser"); // express middleware
 
@@ -21,6 +27,8 @@ const jwt = require("jsonwebtoken");
 // ---------------------------------------------------------------------
 
 const app = express();
+
+// In-memory database (use a real database in production)
 
 const users = [
   { id: 1, username: "admin", password: "password", role: "admin" },
@@ -33,13 +41,9 @@ app.use(bodyParser.json()); // parse application/json
 
 // ---------------------------------------------------------------------
 
-// JSON Web Tokens (JWT)
-//
-// Provide a stateless authentication mechanism that's compact and self-contained
+// Middleware for JWT authentication
 
 const JWT_SECRET = "your-jwt-secret-key";
-
-// Middleware for JWT authentication
 
 const authenticateJWT = (request, response, next) => {
   const header = request.headers.authorization; // the Authorization header is commonly used

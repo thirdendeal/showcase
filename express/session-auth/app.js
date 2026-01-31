@@ -24,6 +24,8 @@ const { json, urlencoded } = bodyParser; // CommonJS module named exports workar
 
 const app = express();
 
+// In-memory database (use a real database in production)
+
 const users = [{ id: 1, username: "user1", password: "password1" }];
 
 // ---------------------------------------------------------------------
