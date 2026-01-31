@@ -17,3 +17,4 @@ JavaScript server-side/backend web framework for Node.js
 1. [REST API](rest-api/app.js)
 2. [Session-Based Authentication](session-auth/app.js)
 3. [Token-Based Authentication (JWT)](token-auth/app.js)
+4. [API Key Authentication](api-key-auth/app.js)
