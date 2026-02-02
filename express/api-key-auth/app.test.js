@@ -1,4 +1,4 @@
-//  Token-Based Authentication (JWT)
+// API Key Authentication
 // ---------------------------------------------------------------------
 
 const request = require("supertest");
